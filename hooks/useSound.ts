@@ -12,10 +12,11 @@ export function useSound() {
 
         loadSound('move', '/sounds/move.mp3');
         loadSound('capture', '/sounds/capture.mp3');
-        // Add more sounds if available
+        loadSound('check', '/sounds/check.mp3');
+        loadSound('victory', '/sounds/victory.mp3');
     }, []);
 
-    const play = useCallback((soundName: 'move' | 'capture') => {
+    const play = useCallback((soundName: 'move' | 'capture' | 'check' | 'victory') => {
         const audio = audioRefs.current[soundName];
         if (audio) {
             audio.currentTime = 0;

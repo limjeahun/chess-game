@@ -71,10 +71,17 @@ export function useChessGame(options: { difficulty?: number } = {}) {
 
             if (move) {
                 updateGameState(newGame);
-                if (move.captured) {
-                    play('capture');
+
+                if (newGame.isCheckmate()) {
+                    play('victory');
+                } else if (newGame.inCheck()) {
+                    play('check');
                 } else {
-                    play('move');
+                    if (move.captured) {
+                        play('capture');
+                    } else {
+                        play('move');
+                    }
                 }
                 return true;
             }
