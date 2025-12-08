@@ -1,4 +1,4 @@
-# React + TypeScript + Next.js 체스 게임 (Human vs AI)
+# React + TypeScript + Next.js 체스 게임
 
 ![게임 스크린샷](public/screenshot.png)
 
