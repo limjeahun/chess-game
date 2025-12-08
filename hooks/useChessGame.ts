@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Chess } from 'chess.js';
 import { useStockfish } from './useStockfish';
+import { useSound } from './useSound';
 
 export function useChessGame(options: { difficulty?: number } = {}) {
     const [game, setGame] = useState(new Chess());
@@ -57,6 +58,8 @@ export function useChessGame(options: { difficulty?: number } = {}) {
         }
     }, []);
 
+    const { play } = useSound();
+
     // 플레이어 이동 처리
     const makeMove = useCallback((from: string, to: string, promotion: string = 'q') => {
         try {
@@ -68,13 +71,18 @@ export function useChessGame(options: { difficulty?: number } = {}) {
 
             if (move) {
                 updateGameState(newGame);
+                if (move.captured) {
+                    play('capture');
+                } else {
+                    play('move');
+                }
                 return true;
             }
         } catch (e) {
             return false;
         }
         return false;
-    }, [game, updateGameState]);
+    }, [game, updateGameState, play]);
 
     // AI 이동 효과
     useEffect(() => {

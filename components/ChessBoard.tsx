@@ -20,7 +20,7 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
     onSquareClick
 }) => {
     return (
-        <div className="w-[600px] max-w-full aspect-square grid grid-cols-8 grid-rows-8 border-8 border-amber-900 shadow-2xl select-none">
+        <div className="w-full max-w-[720px] aspect-square grid grid-cols-8 grid-rows-8 border-4 md:border-8 border-amber-900 shadow-2xl select-none">
             {renderBoard({ game, onMove, orientation, selectedSquare, optionSquares, onSquareClick })}
         </div>
     );

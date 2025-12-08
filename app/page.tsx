@@ -40,10 +40,10 @@ export default function Home() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <main className="min-h-screen bg-slate-950 flex flex-col md:flex-row items-center justify-center p-8 gap-12 font-sans">
+      <main className="min-h-screen bg-slate-950 flex flex-col md:flex-row items-center justify-center p-4 md:p-8 gap-8 md:gap-12 font-sans overflow-x-hidden">
         <div className="flex flex-col items-center gap-4">
           {/* 보드 컨테이너 */}
-          <div className="relative group">
+          <div className="relative group w-full max-w-[720px]">
             <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             <div className="relative bg-slate-900 p-2 rounded-lg border border-slate-700 shadow-2xl">
               <ChessBoard
