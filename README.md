@@ -3,7 +3,7 @@
 ![게임 스크린샷](public/screenshot.png)
 
 ## 📖 프로젝트 개요
-**React**, **Next.js**, **TypeScript**로 제작된 체스 애플리케이션입니다. 이 프로젝트는 **Stockfish** 체스 엔진을 활용한 강력한 "인간 vs 인공지능" 게임플레이 경험을 제공합니다.
+**React**, **Next.js**, **TypeScript**로 제작된 체스 애플리케이션입니다. 이 프로젝트는 **Stockfish** 체스 엔진을 활용하여 "인간 vs AI" 게임플레이를 구현합니다.
 
 
 ## ✨ 주요 기능
