@@ -25,7 +25,7 @@ export const GameControls: React.FC<GameControlsProps> = ({
                 <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
                     체스 게임
                 </h2>
-                <p className="text-slate-400">인간 vs AI</p>
+                <p className="text-slate-400">by Lim Jea Hun</p>
             </div>
 
             <div className="space-y-4">

@@ -13,7 +13,8 @@
 -   **🛡️ 이동 검증**: `chess.js`를 사용한 실시간 로직 엔진으로 모든 체스 규칙(캐슬링, 앙파상, 프로모션)을 적용.
 -   **🏳️ 잡은 기물 & 점수**: 잡은 기물을 시각적으로 표시하고 실시간 기물 점수 우위(예: +5)를 보여줍니다.
 -   **📝 게임 기록 & 실행 취소**: 전체 이동 기록을 추적하며 무르기(Undo) 기능을 통해 전략을 다시 시도할 수 있습니다.
--   **🎨 반응형 UI**: **Tailwind CSS**로 구축된 세련된 다크 테마 인터페이스, 이동 강조 및 포획 표시 기능 포함.
+-   **🎨 반응형 UI**: **Tailwind CSS**로 구축된 다크 테마 인터페이스, 이동 강조 및 포획 표시 기능 포함.
+-   **🔊 효과음**: 체크, 체크메이트, 게임 종료 등 다양한 효과음.
 
 ## 🛠️ 기술 스택
 ![Next.js](https://img.shields.io/badge/Next.js-16.0.7-000000?style=flat&logo=nextdotjs&logoColor=white)
@@ -57,11 +58,17 @@ chess-next/
 ├── components/           # React UI 컴포넌트 (ChessBoard, Controls 등)
 ├── hooks/                # 커스텀 훅 (useChessGame, useStockfish)
 ├── public/               # 정적 에셋 및 Stockfish WASM 파일
+├── sounds/               # 효과음 파일
 └── ...
 ```
 
-## 🤝 기여하기
-기여는 언제나 환영합니다! 편하게 Pull Request를 제출해 주세요.
+## 📚 학습 목표
+- React + TypeScript + Next.js + Web Workers + WASM + Chess.js + Stockfish.js + Tailwind CSS로 체스 게임 구현
+- React의 커스텀 훅을 사용한 상태 관리
+- Web Workers를 활용한 별도의 스레드에서 Stockfish 엔진 실행
+- WASM을 사용한 Stockfish.js 컴파일
+- Chess.js를 사용한 체스 로직 구현
+- Tailwind CSS를 사용한 반응형 UI 구현
 
----
-*Built with ❤️ by Lim Jea Hun*
+## 👉 결과
+- https://chess-game-rouge.vercel.app/

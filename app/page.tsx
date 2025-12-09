@@ -27,13 +27,6 @@ export default function Home() {
     capturedPieces
   } = useChessGame({ difficulty }); // 참고: 제어하려면 난이도를 useChessGame에 전달해야 합니다.
 
-  // 현재 useChessGame은 난이도를 하드코딩합니다.
-  // 이상적으로는 상태를 올리거나 훅을 수정해야 합니다.
-  // 당분간은 여기에 난이도 상태를 추가하고 훅을 업데이트하는 경우 전달할 것입니다.
-  // 일단 훅이 기본 옵션을 사용한다고 가정하겠습니다. 필요한 경우 잠시 후 훅을 업데이트하겠습니다.
-  // 사실, useChessGame이 옵션을 허용하도록 업데이트해야 합니다.
-
-
   // prop-drilling이 아닌 경우 난이도를 전달하기 위해 작은 래퍼를 다시 구현합니다.
   // 그러나 useChessGame이 내부적으로 useStockfish를 초기화하므로 노출되지 않는 한 동적 업데이트가 까다롭습니다.
   // 지금은 있는 그대로 사용하겠습니다.
